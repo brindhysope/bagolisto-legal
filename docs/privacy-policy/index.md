@@ -121,7 +121,27 @@ For any privacy-related request, users may contact:
 
 devbrindy@gmail.com
 
-## 11. Changes to this policy
+## 11. Data deletion requests
+
+Users can request deletion of data associated with Bagolisto by contacting:
+
+devbrindy@gmail.com
+
+Please use the subject: Data deletion request — Bagolisto.
+
+Bagolisto does not require a user account. Trips, bags, items, notes, colors, and preferences are stored locally on the user's device.
+
+Local data can be deleted by:
+
+- deleting the relevant content inside Bagolisto when available;
+- clearing the app data from Android settings;
+- uninstalling the app.
+
+If diagnostics or usage analytics were enabled in the app settings, users can request deletion of related technical data when technically available.
+
+Some data processed by Google Play or Firebase may be retained according to their own policies, including for legal, security, billing, fraud prevention, abuse prevention, or service operation purposes.
+
+## 12. Changes to this policy
 
 This Privacy Policy may be updated to reflect changes to the app, the services used, or legal requirements.
 
