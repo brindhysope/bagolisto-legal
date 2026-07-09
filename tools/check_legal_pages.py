@@ -9,6 +9,12 @@ LOCALES = ("fr","en","de","es","it","pt-BR","pt-PT","ja","ko","nl","sv","da","nb
 EXPECTED = {"privacy-policy": 12, "terms": 6}
 
 
+def localized_path(document: str, locale: str) -> str:
+    if locale == "fr":
+        return f"/bagolisto-legal/{document}/"
+    return f"/bagolisto-legal/{document}/{locale}/"
+
+
 def main() -> None:
     errors = []
     for document, count in EXPECTED.items():
@@ -18,6 +24,7 @@ def main() -> None:
             canonical,
             re.DOTALL,
         )
+        other_document = "terms" if document == "privacy-policy" else "privacy-policy"
         for locale in LOCALES:
             path = ROOT / document / ("index.html" if locale == "fr" else f"{locale}/index.html")
             if not path.exists():
@@ -31,7 +38,9 @@ def main() -> None:
                 "sections": len(re.findall(r"<section data-section=", text)) == count,
                 "contact": text.count("devbrindy@gmail.com") >= 2,
                 "prévalence française": 'data-rule="french-prevails"' in text,
-                "HTML": text.startswith("<!doctype html>") and text.endswith("</html>\n"),
+                "HTML": text.startswith("<!doctype html>") and text.rstrip().endswith("</html>"),
+                "navigation mobile langues": '<details><summary>Langues / Languages</summary><div class="language-links">' in text,
+                "lien interne localisé": f'href="{localized_path(other_document, locale)}"' in text,
             }
             for label, ok in checks.items():
                 if not ok:
@@ -69,7 +78,7 @@ def main() -> None:
         errors.append("ancienne adresse de contact présente")
     if errors:
         raise SystemExit("\n".join(errors))
-    print("OK: 37 locales × 2 documents, structure, date, version, liens et contact cohérents.")
+    print("OK: 37 locales × 2 documents, structure, date, version, liens internes localisés, navigation mobile et contact cohérents.")
 
 
 if __name__ == "__main__":

@@ -35,6 +35,41 @@ LOCALES = {
     "es-419": ("Español (Latinoamérica)", "es"),
 }
 
+def localized_path(document: str, locale: str) -> str:
+    if locale == "fr":
+        return f"/bagolisto-legal/{document}/"
+    return f"/bagolisto-legal/{document}/{locale}/"
+
+
+def localize_internal_links(source: str, document: str, locale: str) -> str:
+    source = source.replace(
+        "nav{margin-bottom:20px;line-height:2}a{color:var(--accent)}",
+        "nav{margin-bottom:20px}summary{cursor:pointer;font-weight:700}"
+        ".language-links{display:flex;flex-wrap:wrap;gap:8px 12px;"
+        "margin-top:8px;line-height:1.4}a{color:var(--accent)}",
+    )
+
+    if 'class="language-links"' not in source:
+        source = re.sub(
+            r'<nav aria-label="Langues">(.*?)</nav>',
+            r'<nav aria-label="Langues"><details><summary>Langues / Languages</summary><div class="language-links">\1</div></details></nav>',
+            source,
+            count=1,
+            flags=re.DOTALL,
+        )
+
+    if document == "privacy-policy":
+        source = source.replace(
+            'href="/bagolisto-legal/terms/"',
+            f'href="{localized_path("terms", locale)}"',
+        )
+    elif document == "terms":
+        source = source.replace(
+            'href="/bagolisto-legal/privacy-policy/"',
+            f'href="{localized_path("privacy-policy", locale)}"',
+        )
+
+    return source
 
 def translate_document(source: str, target: str, cache: dict, key: str) -> str:
     if key not in cache or target in {"hr", "mt", "is"}:
