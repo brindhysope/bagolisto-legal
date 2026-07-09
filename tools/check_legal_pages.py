@@ -37,6 +37,10 @@ def main() -> None:
             text = path.read_text(encoding="utf-8")
             lower = text.lower()
             mail_count = text.count(EMAIL)
+            title_match = re.search(r"<title>(.*?)</title>", text, re.DOTALL)
+            h1_match = re.search(r"<h1>(.*?)</h1>", text, re.DOTALL)
+            title_text = title_match.group(1).strip() if title_match else ""
+            h1_text = h1_match.group(1).strip() if h1_match else ""
 
             checks = {
                 "locale": f'data-locale="{locale}"' in text,
@@ -47,6 +51,10 @@ def main() -> None:
                 "HTML": text.startswith("<!doctype html>") and text.rstrip().endswith("</html>"),
                 "navigation mobile langues": '<details><summary>Langues / Languages</summary><div class="language-links">' in text,
                 "lien interne localisé": f'href="{localized_path(other_document, locale)}"' in text,
+                "title identique h1": title_text == h1_text and bool(title_text),
+                "titre politique localisé": document != "privacy-policy"
+                    or locale in {"fr", "en", "en-GB"}
+                    or title_text != "Bagolisto Privacy Policy",
                 "pas de mailto": "mailto:" not in lower,
                 "contact minimal": mail_count == (1 if document == "privacy-policy" else 0),
                 "ancien texte base produit absent": "base produit" not in lower
