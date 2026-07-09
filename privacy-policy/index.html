@@ -1,196 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Privacy Policy - Bagolisto</title>
-  <meta name="description" content="Privacy Policy for the Bagolisto Android application.">
+  <title>Politique de confidentialité de Bagolisto</title>
   <style>
-    :root {
-      color-scheme: light dark;
-      --background: #f8f7fb;
-      --surface: #ffffff;
-      --text: #1f1d24;
-      --muted: #605d66;
-      --border: #ddd8e6;
-      --accent: #4f46e5;
-      --max-width: 820px;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --background: #141218;
-        --surface: #1f1b24;
-        --text: #f4eff7;
-        --muted: #c9c3cf;
-        --border: #494452;
-        --accent: #c7bfff;
-      }
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: var(--background);
-      color: var(--text);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.65;
-    }
-
-    main {
-      width: min(100% - 32px, var(--max-width));
-      margin: 0 auto;
-      padding: 40px 0 56px;
-    }
-
-    article {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: clamp(20px, 4vw, 34px);
-    }
-
-    h1, h2, h3 {
-      line-height: 1.22;
-      margin: 28px 0 10px;
-    }
-
-    h1 {
-      margin-top: 0;
-      font-size: clamp(2rem, 7vw, 3.2rem);
-    }
-
-    h2 {
-      font-size: clamp(1.35rem, 4vw, 1.7rem);
-    }
-
-    h3 {
-      font-size: 1.15rem;
-    }
-
-    p, li {
-      color: var(--muted);
-    }
-
-    ul {
-      padding-left: 1.25rem;
-    }
-
-    li + li {
-      margin-top: 6px;
-    }
-
-    a {
-      color: var(--accent);
-      text-underline-offset: 3px;
-    }
+    :root{color-scheme:light dark;--bg:#f8f7fb;--surface:#fff;--text:#242128;--muted:#625d68;--accent:#5046d7;--border:#ddd8e6}
+    @media(prefers-color-scheme:dark){:root{--bg:#141218;--surface:#211d25;--text:#f5eff8;--muted:#cbc3cf;--accent:#c9c1ff;--border:#4a4450}}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,sans-serif}
+    main{width:min(100% - 32px,880px);margin:auto;padding:32px 0 56px}article{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:clamp(20px,4vw,36px)}
+    nav{margin-bottom:20px;line-height:2}a{color:var(--accent)}h1,h2{line-height:1.25}p{color:var(--muted)}.meta{font-weight:600}.precedence{border-top:1px solid var(--border);padding-top:18px}
   </style>
 </head>
-<body>
-  <main>
-    <article>
-<h1>Privacy Policy for Bagolisto</h1>
-<p>Effective date: May 2, 2026</p>
-<p>This Privacy Policy explains how the Bagolisto mobile application handles data when it is used.</p>
-<p>Bagolisto is published by Brindhysope.</p>
-<p>Contact: <a href="mailto:devbrindy@gmail.com">devbrindy@gmail.com</a></p>
-<h2>1. Summary</h2>
-<p>Bagolisto is an Android application for packing lists and travel preparation.</p>
-<p>By default:</p>
-<ul>
-  <li>trips, bags, items, notes, colors, and preferences are stored locally on the device;</li>
-  <li>Bagolisto does not require a user account;</li>
-  <li>Bagolisto does not sell personal data;</li>
-  <li>Bagolisto does not display advertising;</li>
-  <li>diagnostics and usage analytics are disabled by default;</li>
-  <li>users can enable or disable diagnostics and usage analytics from the app settings.</li>
-</ul>
-<h2>2. Data created by the user</h2>
-<p>The user may create the following data in the app:</p>
-<ul>
-  <li>trips;</li>
-  <li>bags;</li>
-  <li>items to pack;</li>
-  <li>quantities;</li>
-  <li>notes;</li>
-  <li>colors or visual classification information;</li>
-  <li>display and export preferences.</li>
-</ul>
-<p>This data is stored locally on the device. It is not sent to Brindhysope by default.</p>
-<p>Bagolisto does not require the user to enter their name, address, email address, or account identifier to use the local features of the app.</p>
-<h2>3. Diagnostics data</h2>
-<p>Bagolisto may use Firebase Crashlytics to receive crash and stability reports.</p>
-<p>Diagnostics are disabled by default. They are enabled only if the user activates the corresponding option in the app settings.</p>
-<p>When enabled, diagnostics may include:</p>
-<ul>
-  <li>technical information about a crash;</li>
-  <li>device type;</li>
-  <li>Android system version;</li>
-  <li>app version;</li>
-  <li>technical logs required to analyze the issue.</li>
-</ul>
-<p>Diagnostics reports are not intended to contain the content of the user&#39;s trips, bags, lists, or notes.</p>
-<p>When the user disables diagnostics, Bagolisto disables Crashlytics report sending and requests deletion of unsent reports when technically available.</p>
-<h2>4. Usage analytics</h2>
-<p>Bagolisto may use Firebase Analytics to understand general app usage.</p>
-<p>Usage analytics are disabled by default. They are enabled only if the user activates the corresponding option in the app settings.</p>
-<p>When enabled, analytics may include non-sensitive events, for example:</p>
-<ul>
-  <li>app opening;</li>
-  <li>screen viewing;</li>
-  <li>use of a general feature;</li>
-  <li>technical information about the app version or device type.</li>
-</ul>
-<p>Usage analytics must not include the content of the user&#39;s trips, bags, lists, items, or notes.</p>
-<p>Bagolisto disables collection of the Android Advertising ID when applicable to the app configuration.</p>
-<h2>5. In-app purchases</h2>
-<p>Bagolisto may offer in-app purchases or subscriptions through Google Play Billing.</p>
-<p>Payment operations are handled by Google Play. Bagolisto does not receive or store full payment card details.</p>
-<p>Bagolisto may store locally or technically process the Pro access state required for the app to work, for example to determine whether certain features are available.</p>
-<h2>6. Data sharing</h2>
-<p>Bagolisto does not sell personal data.</p>
-<p>Some technical data may be processed by service providers required for the operation of the app, including:</p>
-<ul>
-  <li>Google Firebase, for diagnostics and usage analytics when enabled by the user;</li>
-  <li>Google Play, for in-app purchases and subscriptions.</li>
-</ul>
-<p>These providers process data according to their own terms and privacy policies.</p>
-<h2>7. Data retention</h2>
-<p>Local data created in Bagolisto remains on the device as long as the user keeps the app and its data.</p>
-<p>The user can delete data by deleting the relevant items in the app, when the feature is available, or by deleting the app data from Android settings.</p>
-<p>Technical data processed by Firebase or Google Play is retained according to the settings and policies of those services.</p>
-<h2>8. Security</h2>
-<p>Bagolisto limits data collection to what is necessary to provide its features.</p>
-<p>The main travel data is stored locally on the device. The user remains responsible for the general security of their device, including screen lock, Android backups, and physical access to the phone.</p>
-<p>No method of storage or transmission can be guaranteed to be fully secure.</p>
-<h2>9. Children</h2>
-<p>Bagolisto is not specifically intended for children.</p>
-<p>If a future version of Bagolisto targets children or families, this policy will be updated and the corresponding Google Play declarations will be adjusted.</p>
-<h2>10. User rights</h2>
-<p>Depending on applicable law, users may have rights regarding their data, including the right to access, rectify, delete, or object to processing.</p>
-<p>For any privacy-related request, users may contact:</p>
-<p><a href="mailto:devbrindy@gmail.com">devbrindy@gmail.com</a></p>
-<h2>11. Data deletion requests</h2>
-<p>Users can request deletion of data associated with Bagolisto by contacting:</p>
-<p><a href="mailto:devbrindy@gmail.com">devbrindy@gmail.com</a></p>
-<p>Please use the subject: Data deletion request — Bagolisto.</p>
-<p>Bagolisto does not require a user account. Trips, bags, items, notes, colors, and preferences are stored locally on the user&#39;s device.</p>
-<p>Local data can be deleted by:</p>
-<ul>
-  <li>deleting the relevant content inside Bagolisto when available;</li>
-  <li>clearing the app data from Android settings;</li>
-  <li>uninstalling the app.</li>
-</ul>
-<p>If diagnostics or usage analytics were enabled in the app settings, users can request deletion of related technical data when technically available.</p>
-<p>Some data processed by Google Play or Firebase may be retained according to their own policies, including for legal, security, billing, fraud prevention, abuse prevention, or service operation purposes.</p>
-<h2>12. Changes to this policy</h2>
-<p>This Privacy Policy may be updated to reflect changes to the app, the services used, or legal requirements.</p>
-<p>The effective date shown at the top of this page will be updated in case of significant changes.</p>
-
-    </article>
-  </main>
-</body>
-</html>
+<body><main>
+  <nav aria-label="Langues"><a href="/bagolisto-legal/privacy-policy/">Français</a> · <a href="/bagolisto-legal/privacy-policy/en/">English</a> · <a href="/bagolisto-legal/privacy-policy/de/">Deutsch</a> · <a href="/bagolisto-legal/privacy-policy/es/">Español</a> · <a href="/bagolisto-legal/privacy-policy/it/">Italiano</a> · <a href="/bagolisto-legal/privacy-policy/pt-BR/">Português (Brasil)</a> · <a href="/bagolisto-legal/privacy-policy/pt-PT/">Português (Portugal)</a> · <a href="/bagolisto-legal/privacy-policy/ja/">日本語</a> · <a href="/bagolisto-legal/privacy-policy/ko/">한국어</a> · <a href="/bagolisto-legal/privacy-policy/nl/">Nederlands</a> · <a href="/bagolisto-legal/privacy-policy/sv/">Svenska</a> · <a href="/bagolisto-legal/privacy-policy/da/">Dansk</a> · <a href="/bagolisto-legal/privacy-policy/nb/">Norsk bokmål</a> · <a href="/bagolisto-legal/privacy-policy/pl/">Polski</a> · <a href="/bagolisto-legal/privacy-policy/cs/">Čeština</a> · <a href="/bagolisto-legal/privacy-policy/sk/">Slovenčina</a> · <a href="/bagolisto-legal/privacy-policy/sl/">Slovenščina</a> · <a href="/bagolisto-legal/privacy-policy/hr/">Hrvatski</a> · <a href="/bagolisto-legal/privacy-policy/hu/">Magyar</a> · <a href="/bagolisto-legal/privacy-policy/ro/">Română</a> · <a href="/bagolisto-legal/privacy-policy/bg/">Български</a> · <a href="/bagolisto-legal/privacy-policy/el/">Ελληνικά</a> · <a href="/bagolisto-legal/privacy-policy/fi/">Suomi</a> · <a href="/bagolisto-legal/privacy-policy/et/">Eesti</a> · <a href="/bagolisto-legal/privacy-policy/lv/">Latviešu</a> · <a href="/bagolisto-legal/privacy-policy/lt/">Lietuvių</a> · <a href="/bagolisto-legal/privacy-policy/ga/">Gaeilge</a> · <a href="/bagolisto-legal/privacy-policy/mt/">Malti</a> · <a href="/bagolisto-legal/privacy-policy/is/">Íslenska</a> · <a href="/bagolisto-legal/privacy-policy/uk/">Українська</a> · <a href="/bagolisto-legal/privacy-policy/tr/">Türkçe</a> · <a href="/bagolisto-legal/privacy-policy/ca/">Català</a> · <a href="/bagolisto-legal/privacy-policy/zh-Hans/">简体中文</a> · <a href="/bagolisto-legal/privacy-policy/zh-Hant/">繁體中文</a> · <a href="/bagolisto-legal/privacy-policy/hi/">हिन्दी</a> · <a href="/bagolisto-legal/privacy-policy/en-GB/">English (UK)</a> · <a href="/bagolisto-legal/privacy-policy/es-419/">Español (Latinoamérica)</a></nav>
+  <article data-document="privacy-policy" data-locale="fr" data-version="1.0" data-effective-date="2026-07-09">
+    <h1>Politique de confidentialité de Bagolisto</h1>
+    <p class="meta">Date d’effet : 2026-07-09 · Version 1.0</p>
+    <p>Cette politique explique comment l’application Android Bagolisto traite les données. Bagolisto est publiée par Brindhysope.</p>
+    <section data-section="1"><h2>1. Principes essentiels</h2><p>Bagolisto fonctionne principalement en local, ne nécessite aucun compte Bagolisto, n’affiche aucune publicité et ne vend aucune donnée personnelle.</p></section>
+    <section data-section="2"><h2>2. Données stockées localement</h2><p>Les voyages, destinations, bagages, éléments, tâches, notes, quantités, couleurs et préférences sont enregistrés localement sur l’appareil. Les widgets Android affichent localement les informations choisies par l’utilisateur.</p></section>
+    <section data-section="3"><h2>3. Diagnostics de stabilité</h2><p>Firebase Crashlytics reçoit par défaut des rapports techniques afin de détecter les crashs, corriger les erreurs, améliorer la stabilité et identifier les problèmes de compatibilité. Ce traitement n’est pas un réglage utilisateur. Bagolisto ne définit aucun identifiant utilisateur Crashlytics personnalisé et n’envoie ni adresse e-mail ni compte Google.</p></section>
+    <section data-section="4"><h2>4. Statistiques d’usage</h2><p>Firebase Analytics traite uniquement des événements fonctionnels génériques et non sensibles. Les statistiques sont désactivées par défaut partout. L’utilisateur peut les activer ou les désactiver à tout moment dans Paramètres. Elles ne servent jamais à la publicité, au remarketing, aux audiences publicitaires ou à la personnalisation publicitaire.</p></section>
+    <section data-section="5"><h2>5. Contenu jamais collecté</h2><p>Diagnostics et statistiques ne reçoivent jamais les titres de voyages, destinations personnelles, noms d’éléments, de bagages ou de tâches, notes, textes saisis, contenu PDF, contenu de sauvegarde, données importées ou exportées, ni compte Google Drive. Bagolisto ne collecte pas l’Advertising ID.</p></section>
+    <section data-section="6"><h2>6. Achats Google Play</h2><p>Google Play traite les achats et abonnements Bagolisto Plus. Bagolisto ne reçoit ni ne conserve les données complètes de carte bancaire. L’application traite uniquement l’état d’accès nécessaire à ses fonctionnalités.</p></section>
+    <section data-section="7"><h2>7. Sauvegarde Google Drive</h2><p>La sauvegarde est facultative et réservée à Bagolisto Plus lorsqu’elle est proposée. À la demande de l’utilisateur, Google Drive conserve une copie des voyages et de la bibliothèque. Il ne s’agit pas d’une synchronisation automatique entre appareils. Le contenu de sauvegarde n’est jamais utilisé pour les diagnostics ou les statistiques.</p></section>
+    <section data-section="8"><h2>8. Export PDF et widgets Android</h2><p>Les PDF sont générés localement puis partagés uniquement à l’initiative de l’utilisateur. Leur contenu n’est pas envoyé à Brindhysope, Crashlytics ou Analytics. Les widgets Android lisent et affichent des données locales.</p></section>
+    <section data-section="9"><h2>9. Prestataires techniques</h2><p>Google Firebase fournit Crashlytics et Analytics, Google Play traite les achats et Google Drive héberge les sauvegardes demandées. Ces prestataires traitent leurs données selon leurs propres politiques. Bagolisto n’est lié à aucun service Google Ads, AdMob, SDK publicitaire ou audience publicitaire.</p></section>
+    <section data-section="10"><h2>10. Conservation, sécurité et suppression</h2><p>Les données locales restent sur l’appareil jusqu’à leur suppression dans l’application, l’effacement des données Android ou la désinstallation. Les sauvegardes peuvent être supprimées depuis le service concerné. Les données techniques suivent les durées de conservation des prestataires. Aucun mode de stockage ou de transmission ne peut garantir une sécurité absolue.</p></section>
+    <section data-section="11"><h2>11. Droits de l’utilisateur</h2><p>Selon la loi applicable, l’utilisateur peut demander accès, rectification, effacement, limitation ou opposition concernant les données détenues par l’éditeur. L’éditeur ne peut pas supprimer à distance des données locales qu’il ne détient pas.</p></section>
+    <section data-section="12"><h2>12. Contact et modifications</h2><p>Pour toute question ou demande relative aux données, contactez devbrindy@gmail.com. Cette politique peut évoluer pour refléter l’application, les prestataires ou les obligations légales ; sa date d’effet sera alors mise à jour.</p></section>
+    <p class="precedence" data-rule="french-prevails"><strong>En cas d’écart de traduction, la version française prévaut dans la mesure permise par la loi.</strong></p>
+    <p><a href="mailto:devbrindy@gmail.com">devbrindy@gmail.com</a> · <a href="/bagolisto-legal/terms/">Avertissement et conditions d’utilisation</a></p>
+  </article>
+</main></body></html>
